@@ -23,7 +23,7 @@ export class Tab3Page {
     this.loadData();
   }
 
-  async loadData(){
+  async loadData(event?: any){
     this.movies = await this.localData.loadFavorites();
     this.genres = await this.movieService.loadGenrers();
     //console.log('Genres', this.genres);
